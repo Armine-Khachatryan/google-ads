@@ -1,0 +1,108 @@
+@font-face {
+  font-family: Roboto_Regular;
+  src: url('app/assets/fonts/Roboto/Roboto_Regular.ttf');
+}
+
+@font-face {
+  font-family: Din_Condensed_Bold;
+  src: url('app/assets/fonts/DinCondens/DINCondensed-Bold.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: Roboto_Regular,sans-serif !important;
+}
+
+.modalInside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleModal{
+    font-family: Din_Condensed_Bold, sans-serif !important;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 96%;
+    color:  #17242e;
+    margin-bottom: 24px;
+}
+.redTitleModal{
+    color:#d32a33;
+}
+
+.textModal{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #49525a;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom:40px
+}
+.boldTextModal{
+    font-weight: 600;
+}
+
+.buttonStyle{
+    border-radius: 8px;
+    padding: 12px 24px;
+    background-color:  #17242e;
+    font-weight: 400;
+    font-size: 14px;
+    /*line-height: 143%;*/
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.modalIconStyle{
+    width: 20px;
+    height:20px;
+    margin-right:12px
+}
+.redButtonStyle{
+    border-radius: 8px;
+    padding: 12px 24px;
+    background-color: #d32a33;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    min-width: 112px;
+    margin: 0 auto;
+}
+.selectStyling{
+  border-radius: 16px;
+  padding: 8px 16px;
+  width: 736px;
+  background-color: #fff;
+  margin-bottom: 40px;
+  color: #49525a;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    body {
+      height: 100%;
+      background-color: black;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    .notification {
+      width: 360px;
+      padding: 15px;
+      background-color: white;
+      border-radius: 16px;
+      position: fixed;
+      bottom: 15px;
+      left: 15px;
+      transition: all 2s linear;
+      transform: translateY(200%);
+
+    }
+
+    .notification-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .notification-title {
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    .notification-close {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #F0F2F5;
+      font-size: 14px;
+    }
+
+    .notification-container {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .notification-media {
+      position: relative;
+    }
+
+    .notification-user-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+      object-fit: cover;
+    }
+
+    .notification-reaction {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      color: white;
+      background-image: linear-gradient(45deg, #0070E1, #14ABFE);
+      font-size: 14px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .notification-content {
+      width: calc(100% - 60px);
+      padding-left: 20px;
+      line-height: 1.2;
+    }
+
+    .notification-text {
+      margin-bottom: 5px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 50px;
+    }
+
+    .notification-timer {
+      color: #000;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .note-active {
+      transform: translateY(0);
+    }
+  </style>
+
+  <div>
+    <div class="notf-wrap">
+      <div class="notification not-1">
+        <div class="notification-header">
+          <h3 class="notification-title">Title</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path
+              d="M14 24.5C19.799 24.5 24.5 19.799 24.5 14C24.5 8.20101 19.799 3.5 14 3.5C8.20101 3.5 3.5 8.20101 3.5 14C3.5 19.799 8.20101 24.5 14 24.5Z"
+              stroke="black" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            </path>
+            <path d="M17.5 10.5L10.5 17.5" stroke="black" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path d="M10.5 10.5L17.5 17.5" stroke="black" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="notification-container">
+          <div class="notification-media">
+            <img src="//www.packsnapandgo.com/cdn/shop/files/izvrsmfbgl6m.jpg?v=1707486032&amp;width=138" alt="user"
+              srcset="//www.packsnapandgo.com/cdn/shop/files/izvrsmfbgl6m.jpg?v=1707486032&amp;width=138 138w"
+              width="138" height="100" loading="lazy" class="notification-user-avatar">
+
+          </div>
+          <div class="notification-content">
+            <p class="notification-text">
+              Description
+            </p>
+            <span class="notification-timer">
+
+              a few seconds ago
+            </span>
+          </div>
+        </div>
+      </div>
+      <style>
+        .not-1 {
+
+          /* animation: noti 2s alternate ease-in; */
+          animation: noti 2s alternate-reverse forwards alternate ease-in;
+          /* animation-delay: 2s; */
+        }
+      </style>
+      <div class="notification not-2">
+        <div class="notification-header">
+          <h3 class="notification-title">Title</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path
+              d="M14 24.5C19.799 24.5 24.5 19.799 24.5 14C24.5 8.20101 19.799 3.5 14 3.5C8.20101 3.5 3.5 8.20101 3.5 14C3.5 19.799 8.20101 24.5 14 24.5Z"
+              stroke="black" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            </path>
+            <path d="M17.5 10.5L10.5 17.5" stroke="black" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path d="M10.5 10.5L17.5 17.5" stroke="black" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="notification-container">
+          <div class="notification-media">
+            <img
+              src="//www.packsnapandgo.com/cdn/shop/files/161005-jeanne-calment-mug-235p.webp?v=1707486033&amp;width=138"
+              alt="user"
+              srcset="//www.packsnapandgo.com/cdn/shop/files/161005-jeanne-calment-mug-235p.webp?v=1707486033&amp;width=138 138w"
+              width="138" height="174" loading="lazy" class="notification-user-avatar">
+
+          </div>
+          <div class="notification-content">
+            <p class="notification-text">
+              Description
+            </p>
+            <span class="notification-timer">
+
+              a few seconds ago
+            </span>
+          </div>
+        </div>
+      </div>
+      <style>
+        /* .not-2 {
+
+      animation: noti 2s infinite forwards alternate ease-in;
+      animation-delay: calc(4s + 2s);
+    } */
+      </style>
+      <div class="notification not-3">
+        <div class="notification-header">
+          <h3 class="notification-title">Title</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path
+              d="M14 24.5C19.799 24.5 24.5 19.799 24.5 14C24.5 8.20101 19.799 3.5 14 3.5C8.20101 3.5 3.5 8.20101 3.5 14C3.5 19.799 8.20101 24.5 14 24.5Z"
+              stroke="black" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            </path>
+            <path d="M17.5 10.5L10.5 17.5" stroke="black" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path d="M10.5 10.5L17.5 17.5" stroke="black" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="notification-container">
+          <div class="notification-media">
+            <img src="//www.packsnapandgo.com/cdn/shop/files/download-9.jpg?v=1707486033&amp;width=138" alt="user"
+              srcset="//www.packsnapandgo.com/cdn/shop/files/download-9.jpg?v=1707486033&amp;width=138 138w" width="138"
+              height="174" loading="lazy" class="notification-user-avatar">
+
+          </div>
+          <div class="notification-content">
+            <p class="notification-text">
+              Description
+            </p>
+            <span class="notification-timer">
+
+              a few seconds ago
+            </span>
+          </div>
+        </div>
+      </div>
+      <style>
+        /* .not-3 {
+
+      animation: noti 2s infinite forwards alternate ease-in;
+      animation-delay: calc(8s + 2s);
+    } */
+      </style>
+
+    </div>
+  </div>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get all notification items
+
+      const notificationItems = document.querySelectorAll(".notification");
+      let isVisible = false;
+
+
+      const notificationTime = () => {
+        let timeEnd = [1000, 2000, 5000]
+        let timeStart = [5000, 3000, 10000]
+        notificationItems.forEach(function (item, index) {
+          // Add 'note-active' class after a delay of 2 seconds
+          setTimeout(function () {
+            addActiveClass(item);
+          }, index * 4000 + timeStart[index]);
+
+          // Remove 'note-active' class after 4 seconds
+          setTimeout(function () {
+            removeActiveClass(item, index);
+          }, (index * 4000) + 4000 + timeEnd[index]);
+        });
+      }
+      // Function to add 'note-active' class
+      function addActiveClass(item) {
+        item.classList.add("note-active");
+      }
+
+      // Function to remove 'note-active' class
+      function removeActiveClass(item, index) {
+        item.classList.remove("note-active");
+        if (index === notificationItems.length - 1) {
+          notificationTime()
+        }
+
+      }
+
+      notificationTime()
+
+
+      // Loop through each notification item
+
+    });
+  </script>
+</body>
+
+</html>
